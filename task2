@@ -1,0 +1,36 @@
+function main(){
+   repeat(2){
+   prikol();
+   up1();
+   prikol2();
+   up2();
+   }
+   prikol();
+}
+function prikol(){
+         putBeeper();
+         move();
+         move();
+         putBeeper();
+         move();
+         move();
+         putBeeper();
+}
+function prikol2(){
+         move();
+         putBeeper();
+         move();
+         move();
+         putBeeper();
+         move();
+}
+function up1(){
+   turnLeft();
+   move();
+   turnLeft();
+}
+function up2(){
+   turnRight();
+   move();
+   turnRight();
+}
