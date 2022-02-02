@@ -1,0 +1,30 @@
+function main(){
+   turnLeft();
+   while(noBeepersPresent()){
+      check();
+      if(beepersPresent()){
+         pickBeeper();
+      }
+   }
+}
+function check(){
+   if(frontIsBlocked() && rightIsBlocked() && leftIsBlocked()){
+      turnAround();
+      move();
+      if(leftIsClear()){
+         turnLeft();
+         move();
+      } else if (rightIsClear()){
+         turnRight();
+         move();
+      }
+   } else if(frontIsBlocked()){
+      if(rightIsClear()){
+         turnRight();
+      } else if(rightIsBlocked()){
+         turnLeft();
+      }
+   } else if(frontIsClear()){
+      move();
+   }
+}
